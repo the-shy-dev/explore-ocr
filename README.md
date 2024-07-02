@@ -1,6 +1,7 @@
 # explore-ocr
 
-Prerequisites
+## Prerequisites
+
 ```bash
 # Reference: https://tesseract-ocr.github.io/tessdoc/Compiling.html#linux
 sudo apt install tesseract-ocr
@@ -32,6 +33,10 @@ cmake ..
 # Build the project
 cmake --build ..
 
-# Run the executable with an image file as an argument
+# Run the desired executable with an image file as an argument
 ./BasicDemo path/to/your/image.png
 ```
+
+## Examples
+
+Examples have been taken from here: https://tesseract-ocr.github.io/tessdoc/Examples_C++.html
