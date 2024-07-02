@@ -8,6 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Add the executable
 add_executable(BasicDemo src/BasicDemo.cpp)
 add_executable(SetRectangle src/SetRectangle.cpp)
+add_executable(GetComponentImages src/GetComponentImages.cpp)
+add_executable(ResultIterator src/ResultIterator.cpp)
 
 # Find Tesseract and Leptonica libraries
 find_package(PkgConfig REQUIRED)
@@ -20,3 +22,5 @@ include_directories(${Tesseract_INCLUDE_DIRS} ${Leptonica_INCLUDE_DIRS})
 # Link Tesseract and Leptonica libraries
 target_link_libraries(BasicDemo ${Tesseract_LIBRARIES} ${Leptonica_LIBRARIES})
 target_link_libraries(SetRectangle ${Tesseract_LIBRARIES} ${Leptonica_LIBRARIES})
+target_link_libraries(GetComponentImages ${Tesseract_LIBRARIES} ${Leptonica_LIBRARIES})
+target_link_libraries(ResultIterator ${Tesseract_LIBRARIES} ${Leptonica_LIBRARIES})
