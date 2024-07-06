@@ -10,12 +10,12 @@ include_directories(
 file(GLOB_RECURSE EXTERNAL_LIB_FILES "${CMAKE_SOURCE_DIR}/lib/external/*.so*")
 
 # PaddleOCR and PaddlePaddle settings
-set(PADDLE_DIR ${CMAKE_SOURCE_DIR}/paddle)
+set(PADDLE_DIR /mnt/d/Projects/paddle_inference)
 include_directories(${PADDLE_DIR}/paddle/include)
 link_directories(${PADDLE_DIR}/paddle/lib)
 
 # Add executable
 add_executable(PaddleOCRExample main.cpp)
 
-# Link PaddleOCR, PaddlePaddle and OpenCV libraries
-target_link_libraries(PaddleOCRExample ${EXTERNAL_LIB_FILES} paddle_inference)
+# Link PaddleOCR, PaddlePaddle, and OpenCV libraries
+target_link_libraries(PaddleOCRExample ${EXTERNAL_LIB_FILES} ${PADDLE_DIR}/paddle/lib/libpaddle_inference.so)
